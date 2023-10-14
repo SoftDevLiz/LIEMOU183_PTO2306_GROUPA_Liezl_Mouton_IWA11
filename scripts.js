@@ -1,35 +1,67 @@
 // script.js
 
-const 1-root = document(order1),
-const 1-biscuits: document(biscuits),
-const 1-donuts: document(donuts),
-const 1-pancakes: document(pancakes),
-const 1-status: document(status)
+// look for ORDER in document
+let order1 = document.querySelector('[data-key="order1"]');
 
-const 2-root = document(order2),
-const 2-biscuits: document(biscuits),
-const 2-donuts: document(donuts),
-const 2-pancakes: document(pancakes),
-const 2-status: document(status)
+// look for CLASS in order1
+let biscuits1class = order1.querySelector(".biscuits");
+// look for CLASS in biscuit1class
+let biscuits1count = biscuits1class.querySelector(".count");
+// Change text content of biscuit1count to the value attribute of data-biscuits that are inside of order1
+biscuits1count.textContent = order1.getAttribute("data-biscuits");
 
-const 3-root = document(order3),
-const 3-biscuits: document(biscuits),
-const 3-donuts: document(donuts),
-const 3-pancakes: document(pancakes),
-const 3-status: document(status)
+let donut1class = order1.querySelector(".donuts");
+let donut1count = donut1class.querySelector(".count");
+donut1count.textContent = order1.getAttribute("data-donuts");
 
-1-biscuits= 1-root.biscuits,
-1-donuts = 1-root.donuts,
-1-pancakes = 1-root.pancakes,
-1-status = 1-root.status ? Delivered : Pending
+let pancakes1class = order1.querySelector(".pancakes");
+let pancakes1count = pancakes1class.querySelector(".count");
+pancakes1count.textContent = order1.getAttribute("data-pancakes");
 
-2-biscuits= 2-root.biscuits,
-2-donuts = 2-root.donuts,
-2-pancakes = 2-root.pancakes,
-2-status = 2-root.status ? Delivered : Pending
+let status1class = order1.querySelector(".status");
+let status1line = status1class.querySelector("dd");
+status1line.textContent =
+  order1.getAttribute("data-delivered") === "true" ? "Delivered" : "Pending";
+// Replace the status with "Delivered" else "Pending" depending on if the value attribute of this key is === "true"
 
-3-biscuits= 3-root.biscuits,
-3-donuts = 3-root.donuts,
-3-pancakes = 3-root.pancakes,
-3-status = 3-root.status ? Delivered : Pending
+// ORDER 2
 
+let order2 = document.querySelector('[data-key="order2"]');
+
+let biscuits2class = order2.querySelector(".biscuits");
+let biscuits2count = biscuits2class.querySelector(".count");
+biscuits2count.textContent = order2.getAttribute("data-biscuits");
+
+let donut2class = order2.querySelector(".donuts");
+let donut2count = donut2class.querySelector(".count");
+donut2count.textContent = order2.getAttribute("data-donuts");
+
+let pancakes2class = order2.querySelector(".pancakes");
+let pancakes2count = pancakes2class.querySelector(".count");
+pancakes2count.textContent = order2.getAttribute("data-pancakes");
+
+let status2class = order2.querySelector(".status");
+let status2line = status2class.querySelector("dd");
+status2line.textContent =
+  order2.getAttribute("data-delivered") === "true" ? "Delivered" : "Pending";
+
+// ORDER 3
+
+let order3 = document.querySelector('[data-key="order3"]');
+
+let biscuits3class = order3.querySelector(".biscuits");
+let biscuits3count = biscuits3class.querySelector(".count");
+biscuits3count.textContent = order3.getAttribute("data-biscuits");
+
+let donut3class = order3.querySelector(".donuts");
+let donut3count = donut3class.querySelector(".count");
+donut3count.textContent = order3.getAttribute("data-donuts");
+
+let pancakes3class = order3.querySelector(".pancakes");
+let pancakes3count = pancakes3class.querySelector(".count");
+pancakes3count.textContent = order3.getAttribute("data-pancakes");
+
+let status3class = order3.querySelector(".status");
+let status3line = status3class.querySelector("dd");
+status3line.textContent =
+  order3.getAttribute("data-delivered") === "true" ? "Delivered" : "Pending";
